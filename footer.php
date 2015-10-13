@@ -1,12 +1,13 @@
 <?php /** * @package eyedea */ ?>
 
+<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 <footer class="site-footer">
-  <div class="site-info container">
-    Website by <a href="http://www.vireoproductions.com">Vireo Productions</a>
+  <div class="container">
+  <?php dynamic_sidebar( 'footer' ); ?>
   </div>
-  <!-- /site-info -->
+  <div class="clear"></div>
 </footer>
-</div>
+<?php endif; ?>
 <!-- /page -->
 
 <?php wp_footer(); ?>
